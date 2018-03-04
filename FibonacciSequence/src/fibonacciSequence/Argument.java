@@ -5,11 +5,10 @@ import java.io.*;
 public class Argument {
 	
 	private int number;
-	boolean isCorrect;
 	
 	public void getDataFromUser() {
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-		isCorrect = true;
+		boolean isCorrect = true;
 		do {
 			try {
 				number = Integer.parseInt(input.readLine());

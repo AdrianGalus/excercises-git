@@ -30,8 +30,9 @@ public class FibonacciSequence {
 	
 	private void showResults() {
 		
-		for(long series : sequence) {
-			System.out.print(series + " ");
+		System.out.println("Indeks\tWartość");
+		for(int i = 0; i < sequence.length; i++) {
+			System.out.format("%d \t%,d\n", i+1, sequence[i]);
 		}
 	}
 	
