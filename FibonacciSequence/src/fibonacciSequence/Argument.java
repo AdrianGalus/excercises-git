@@ -5,10 +5,11 @@ import java.io.*;
 public class Argument {
 	
 	private int number;
+	boolean isCorrect;
 	
 	public void getDataFromUser() {
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-		boolean isCorrect = true;
+		isCorrect = true;
 		do {
 			try {
 				number = Integer.parseInt(input.readLine());
@@ -21,7 +22,7 @@ public class Argument {
 				isCorrect = false;
 			}
 			catch(IllegalArgumentException e) {
-				System.out.println("Podana liczba musi być większa od 0!");
+				System.out.println("Liczba musi być większa od 0!");
 				isCorrect = false;
 			}
 			catch(IOException e) {
@@ -31,13 +32,14 @@ public class Argument {
 		}while(!isCorrect);
 	}
 	
-	private void checkNumber(int number) throws IllegalArgumentException {
+	private void checkNumber(int number) throws IllegalArgumentException{
 		if(number < 1) {
 			throw new IllegalArgumentException();
 		}
 	}
 	
 	public int getNumber() {
+		
 		return number;
 	}
 }
