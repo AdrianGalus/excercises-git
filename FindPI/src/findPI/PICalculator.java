@@ -2,11 +2,15 @@ package findPI;
 
 public class PICalculator {
 	
-	public void showPI(Argument argument) {
+	public void useNumber(int number) {
 		
+		showPI(number);
+	}
+	
+	private void showPI(int number) {
 		String text = "Liczba PI z dokładnością do %d miejsc po przecinku: %.";
 		StringBuilder strB = new StringBuilder(text);
-		strB.append(argument.getNumber() + "f.");
-		System.out.format(strB.toString(), argument.getNumber(), Math.PI);
+		strB.append(number + "f");
+		System.out.format(strB.toString(), number, Math.PI);
 	}
 }

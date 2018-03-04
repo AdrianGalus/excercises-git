@@ -4,9 +4,10 @@ public class FindPI {
 
 	public static void main(String[] args) {
 		
+		System.out.println("Program wyświetla liczbę PI. Wybierz, ile miejsc po przecinku ma zostać wyświetlonych.");
 		Argument argument = new Argument();
-		argument.getAndSetData();
+		argument.getDataFromUser();
 		PICalculator calculator = new PICalculator();
-		calculator.showPI(argument);
+		calculator.useNumber(argument.getNumber());
 	}
 }
