@@ -4,8 +4,9 @@ public class FibonacciSequence {
 	
 	long[] sequence;
 	
-	public void showFibonacciSequence(int number) {
+	public void showFibonacciSequence(Argument argument) {
 		
+		int number = argument.getNumber();
 		if(number == 1) {
 			System.out.print(0);
 		}
