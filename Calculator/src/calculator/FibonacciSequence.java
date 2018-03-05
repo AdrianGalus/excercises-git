@@ -9,6 +9,11 @@ public class FibonacciSequence implements MyFunctions {
 	long[] sequence;
 	
 	@Override
+	public void showYourActivity() {
+		System.out.println("Ile początkowych liczb z Ciągu Fibonacciego chcesz wyświetlić?");
+	}
+	
+	@Override
 	public void showResults(Argument argument) {
 		
 		int number = argument.getNumber();

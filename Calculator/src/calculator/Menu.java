@@ -1,5 +1,7 @@
 package calculator;
 
+import java.util.*;
+
 public class Menu {
 	
 	public void showMenu() {
@@ -12,30 +14,22 @@ public class Menu {
 	
 	public void select(Argument argument1) {
 		
-		ArgumentReader reader2 = new ArgumentReader();
-		int number = argument1.getNumber();
-		switch(number) {
-		case 1: {
-			System.out.println("Ile początkowych liczb z Ciągu Fibonacciego chcesz wyświetlić?");
+		Map<Integer, MyFunctions> functions = new HashMap<Integer, MyFunctions>();
+		functions.put(1, new FibonacciSequence());
+		functions.put(2, new PI_Number());
+		
+		if(functions.containsKey(argument1.getNumber())) {
+			MyFunctions function = functions.get(argument1.getNumber());
+			function.showYourActivity();
+			ArgumentReader reader2 = new ArgumentReader();
 			argument1 = reader2.getDataFromUser();
-			FibonacciSequence fibSeq = new FibonacciSequence();
-			fibSeq.showResults(argument1);
-			break;
+			function.showResults(argument1);
 		}
-		case 2: {
-			System.out.println("Ile miejsc po przecinku ma zostać wyświetlonych?");
-			argument1 = reader2.getDataFromUser();
-			PI_Number pi = new PI_Number();
-			pi.showResults(argument1);
-			break;
+		else if(argument1.getNumber() == 3) {
+			System.out.println("A pomożesz mi to okodować? ;)");
 		}
-		case 3: {
-			System.out.println("A pomożesz mi to okodować? ;)\n");
-			break;
-		}
-		default: {
-			System.out.println("Niepoprawny wybór");
-		}
+		else {
+			System.out.println("Niepoprawny wybór!");
 		}
 	}
 }

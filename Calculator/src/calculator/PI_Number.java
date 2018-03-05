@@ -3,6 +3,11 @@ package calculator;
 public class PI_Number implements MyFunctions {
 
 	@Override
+	public void showYourActivity() {
+		System.out.println("Ile miejsc po przecinku ma zostać wyświetlonych?");
+	}
+	
+	@Override
 	public void showResults(Argument argument) {
 		
 		int number = argument.getNumber();
