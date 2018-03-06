@@ -4,6 +4,8 @@ import java.io.*;
 
 public class ArgumentReader {
 	
+	private boolean isActive = true;
+	
 	public Argument getDataFromUser() {
 		
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
@@ -33,8 +35,15 @@ public class ArgumentReader {
 	}
 	
 	private void checkNumber(int number) throws IllegalArgumentException {
-		if(number < 1) {
+		if(number < 0) {
 			throw new IllegalArgumentException();
 		}
+		if(number == 0) {
+			isActive = false;
+		}
+	}
+	
+	public boolean isActive() {
+		return isActive;
 	}
 }

@@ -6,7 +6,7 @@ public class Menu {
 	
 	public void showMenu() {
 		
-		System.out.println("Co chcesz zrobić?");
+		System.out.println("Co chcesz zrobić? \"0\" kończy działanie programu.");
 		System.out.println("1. Wyświetlić Ciąg Fibonacciego");
 		System.out.println("2. Wyświetlić liczbę PI");
 		System.out.println("3. Coś innego");
@@ -27,6 +27,9 @@ public class Menu {
 		}
 		else if(argument1.getNumber() == 3) {
 			System.out.println("A pomożesz mi to okodować? ;)");
+		}
+		else if(argument1.getNumber() == 0) {
+			System.out.println("Koniec programu.");
 		}
 		else {
 			System.out.println("Niepoprawny wybór!");
