@@ -26,7 +26,7 @@ public class Menu {
 			function.showResults(argument1);
 		}
 		else if(argument1.getNumber() == 3) {
-			System.out.println("A pomożesz mi to okodować? ;)");
+			System.out.println("A pomożesz mi to okodować? ;)\n");
 		}
 		else if(argument1.getNumber() == 0) {
 			System.out.println("Koniec programu.");

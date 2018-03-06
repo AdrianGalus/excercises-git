@@ -17,7 +17,10 @@ public class FibonacciSequence implements MyFunctions {
 	public void showResults(Argument argument) {
 		
 		int number = argument.getNumber();
-		if(number == 1) {
+		if(number == 0) {
+			System.out.println();
+		}
+		else if(number == 1) {
 			calculateDefaultFibonacciSequence();
 			showFibonacciSequence();
 		}
@@ -49,7 +52,7 @@ public class FibonacciSequence implements MyFunctions {
 		
 		System.out.println("Indeks\tWartość");
 		for(int i = 0; i < sequence.length; i++) {
-			System.out.format("%d \t%,d\n", i+1, sequence[i]);
+			System.out.format("%d \t%,d\n\n", i+1, sequence[i]);
 		}
 	}
 	
