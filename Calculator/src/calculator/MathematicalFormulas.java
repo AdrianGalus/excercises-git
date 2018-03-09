@@ -1,6 +1,6 @@
 package calculator;
 
-public interface MyFunctions {
+public interface MathematicalFormulas {
 	
 	void showYourActivity();
 	void showResults(Argument argument);

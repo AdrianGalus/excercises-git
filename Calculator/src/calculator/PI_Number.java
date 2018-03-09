@@ -1,6 +1,6 @@
 package calculator;
 
-public class PI_Number implements MyFormulas {
+public class PI_Number implements MathematicalFormulas {
 
 	@Override
 	public void showYourActivity() {

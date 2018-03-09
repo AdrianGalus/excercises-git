@@ -4,7 +4,7 @@
 
 package calculator;
 
-public class FibonacciSequence implements MyFormulas {
+public class FibonacciSequence implements MathematicalFormulas {
 	
 	long[] sequence;
 	
@@ -53,7 +53,7 @@ public class FibonacciSequence implements MyFormulas {
 		
 		System.out.println("Indeks\tWartość");
 		for(int i = 0; i < sequence.length; i++) {
-			System.out.format("%d \t%,d\n\n", i+1, sequence[i]);
+			System.out.format("%d \t%,d\n", i+1, sequence[i]);
 		}
 	}
 	

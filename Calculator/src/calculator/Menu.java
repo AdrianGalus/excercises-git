@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Menu {
 	
-	Map<Integer, MyFormulas> functions;
+	Map<Integer, MathematicalFormulas> functions;
 	
 	public void showMenu() {
 		
@@ -19,7 +19,7 @@ public class Menu {
 		setFormulas();
 		
 		if(functions.containsKey(argument1.getNumber())) {
-			MyFormulas function = functions.get(argument1.getNumber());
+			MathematicalFormulas function = functions.get(argument1.getNumber());
 			function.showYourActivity();
 			ArgumentReader reader2 = new ArgumentReader();
 			argument1 = reader2.getDataFromUser();
@@ -38,7 +38,7 @@ public class Menu {
 	
 	private void setFormulas() {
 		
-		functions = new HashMap<Integer, MyFormulas>();
+		functions = new HashMap<Integer, MathematicalFormulas>();
 		functions.put(1, new FibonacciSequence());
 		functions.put(2, new PI_Number());
 	}
