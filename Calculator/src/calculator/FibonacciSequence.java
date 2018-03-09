@@ -4,7 +4,7 @@
 
 package calculator;
 
-public class FibonacciSequence implements MyFunctions {
+public class FibonacciSequence implements MyFormulas {
 	
 	long[] sequence;
 	
@@ -34,6 +34,7 @@ public class FibonacciSequence implements MyFunctions {
 	}
 	
 	private void calculateDefaultFibonacciSequence( ) {
+		
 		sequence = new long[1];
 		sequence[0] = 0; 
 	}
@@ -57,6 +58,7 @@ public class FibonacciSequence implements MyFunctions {
 	}
 	
 	private void showWarning() {
+		
 		System.out.println("To zbyt duży zakres - ostatnie liczby nie będą poprawnie obliczone.");
 		System.out.println("Wybierz poprawny zakres (maksymalnie 93 liczby).\n");
 	}

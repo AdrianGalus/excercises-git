@@ -1,9 +1,10 @@
 package calculator;
 
-public class PI_Number implements MyFunctions {
+public class PI_Number implements MyFormulas {
 
 	@Override
 	public void showYourActivity() {
+		
 		System.out.println("Ile miejsc po przecinku ma zostać wyświetlonych?");
 	}
 	
@@ -15,6 +16,7 @@ public class PI_Number implements MyFunctions {
 	}
 	
 	private void showPI(int number) {
+		
 		System.out.println("[Tymczasowa implementacja z klasy Math]");
 		String text = "Liczba PI z dokładnością do %d miejsc po przecinku: %.";
 		StringBuilder strB = new StringBuilder(text);
