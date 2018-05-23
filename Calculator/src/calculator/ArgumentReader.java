@@ -6,10 +6,11 @@ public class ArgumentReader {
 	
 	private boolean isActive = true;
 	private boolean validInput = true;
+	private BufferedReader input;
 	
 	public Argument getDataFromUser() {
 		
-		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		input = new BufferedReader(new InputStreamReader(System.in));
 		int number = 0;
 		do {
 			try {
@@ -26,17 +27,16 @@ public class ArgumentReader {
 				validInput = false;
 			}
 		}while(!validInput);
-		
 		return new Argument(number);
 	}
 	
-	private void checkNumber(int number) throws IllegalArgumentException {
-		
+	private void checkNumber(int number) {
+
 		if(number < 0) {
 			System.out.println("Liczba musi być dodatnia!");
 			validInput = false;
 		}
-		if(number == 0) {
+		else if(number == 0) {
 			isActive = false;
 		}
 	}
@@ -44,5 +44,14 @@ public class ArgumentReader {
 	public boolean isActive() {
 		
 		return isActive;
+	}
+	
+	public void closeStream() {
+		try {
+			input.close();
+		}
+		catch(IOException e) {
+			System.out.println("Błąd wejścia-wyjścia!");
+		}
 	}
 }

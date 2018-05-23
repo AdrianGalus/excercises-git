@@ -4,12 +4,14 @@ public class Calculator {
 
 	public static void main(String[] args) {
 		
-		Menu menu = new Menu();
+		MainMenu main = new MainMenu();
+		MenuBuilder selector = new MenuBuilder();
 		ArgumentReader reader = new ArgumentReader();
 		while(reader.isActive()) {
-			menu.showMenu();
+			main.showMainMenu();
 			Argument argument1 = reader.getDataFromUser();	
-			menu.select(argument1);
+			selector.getArgument(argument1);
 		}
+		reader.closeStream();
 	}
 }

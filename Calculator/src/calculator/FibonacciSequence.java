@@ -6,10 +6,11 @@ package calculator;
 
 public class FibonacciSequence implements MathematicalFormulas {
 	
-	long[] sequence;
+	private long[] sequence;
 	
 	@Override
 	public void showYourActivity() {
+		
 		System.out.println("Ile początkowych liczb z Ciągu Fibonacciego chcesz wyświetlić?");
 	}
 	
@@ -55,6 +56,7 @@ public class FibonacciSequence implements MathematicalFormulas {
 		for(int i = 0; i < sequence.length; i++) {
 			System.out.format("%d \t%,d\n", i+1, sequence[i]);
 		}
+		System.out.println();
 	}
 	
 	private void showWarning() {
